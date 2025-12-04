@@ -1,5 +1,4 @@
 
-import './App.css'
 import { BidCalculatorPage } from './pages/BidCalculatorPage';
 
 function App() {

@@ -52,7 +52,6 @@ export const BidForm: React.FC<BidFormProps> = ({ onCalculated }) => {
   useEffect(() => {
     debouncedCalculate(price, vehicleType);
     return () => {
-      // don't cancel here, we just let the debounce run or be replaced
     };
   }, [price, vehicleType, debouncedCalculate]);
 
@@ -64,7 +63,6 @@ export const BidForm: React.FC<BidFormProps> = ({ onCalculated }) => {
       debouncedCalculate.cancel();
       if (abortRef.current) abortRef.current.abort();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
