@@ -3,7 +3,6 @@ import type { BidCalculationResponse, VehicleType } from '../types/bid';
 const API_URL = import.meta.env.VITE_API_URL as string | undefined;
 
 if (!API_URL) {
-  // Optional: log a warning for devs
   console.warn('VITE_API_URL is not set. API calls will fail.');
 }
 
